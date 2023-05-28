@@ -87,8 +87,8 @@ def current_filters(city,month,day):
 
 def load_data(city, month, day):
     # Load the data file for the specified city into a df
-    filename = CITY_DATA[city]
-    df = pd.read_csv(filename)
+    file_name = CITY_DATA[city]
+    df = pd.read_csv(file_name)
 
     # Convert start time column to datetime
     df['Start Time'] = pd.to_datetime(df['Start Time'])
