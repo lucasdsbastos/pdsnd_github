@@ -81,7 +81,7 @@ def get_filters():
 
 
 
-def current_filters(city,month,day):
+def applied_filters(city,month,day):
     print(f'Applied filters: {city.capitalize()}, {month.capitalize()}, {day.capitalize()}.\n')
 
 
@@ -138,7 +138,7 @@ def time_stats(df, city, month, day):
     print_s('\nCalculating time data...\n')
     print('\nDone. Now displaying most frequent times of travel.\n')
 
-    current_filters(city,month,day)
+    applied_filters(city,month,day)
 
     start_time = time.time()
 
@@ -180,7 +180,7 @@ def station_stats(df, city, month, day):
     print_s('Processing Query...\n')
     print('Done. Now displaying stations data.\n')
     
-    current_filters(city,month,day)
+    applied_filters(city,month,day)
 
     start_time = time.time()
 
@@ -209,7 +209,7 @@ def trip_duration_stats(df, city, month, day):
     print_s('Processing Query...\n')
     print('Done. Now displaying trip duration data.\n')
 
-    current_filters(city,month,day)
+    applied_filters(city,month,day)
     
     start_time = time.time()
 
@@ -241,7 +241,7 @@ def user_stats(df, city, month, day):
     print_s('Processing user status...\n')
     print('Done. Now displaying user data.\n')
     
-    current_filters(city,month,day)
+    applied_filters(city,month,day)
 
 
     start_time = time.time()
