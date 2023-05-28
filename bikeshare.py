@@ -169,8 +169,6 @@ def time_stats(df, city, month, day):
     print("\nQuery was completed in %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-    # Prompt the user to see raw data
-    display_raw_data(df, num_rows=5)
 
 
 def station_stats(df, city, month, day):
@@ -199,8 +197,6 @@ def station_stats(df, city, month, day):
     print("\nQuery was completed in %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-        # Prompt the user to see raw data
-    display_raw_data(df, num_rows=5)
 
 def trip_duration_stats(df, city, month, day):
     """Displays statistics on the total and average trip duration."""
@@ -230,8 +226,6 @@ def trip_duration_stats(df, city, month, day):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-' * 40)
 
-        # Prompt the user to see raw data
-    display_raw_data(df, num_rows=5)
 
 
 def user_stats(df, city, month, day):
@@ -291,8 +285,7 @@ def user_stats(df, city, month, day):
     print('\nQuery was completed in %s seconds.' % (time.time() - start_time))
     print('-' * 40)
 
-        # Prompt the user to see raw data
-    display_raw_data(df, num_rows=5)
+        
 
 def menu():
 
@@ -301,7 +294,8 @@ def menu():
     print("2. Station Statistics")
     print("3. Trip Duration Statistics")
     print("4. User Statistics")
-    print("5. Exit")
+    print("5. Raw data")
+    print("6. Exit")
     choice = input("\nType the desired option number: ")
     return choice
 
@@ -340,6 +334,10 @@ def main():
                 choice = user_stats(df, city, month, day)  
                 next_action()
             elif choice == "5":
+                # Prompt the user to see raw 
+                choice = display_raw_data(df, num_rows=5) 
+                next_action()
+            elif choice == "6":
                 print("Exiting the program...")
                 exit()
             else:
