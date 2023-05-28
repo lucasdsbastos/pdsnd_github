@@ -9,7 +9,7 @@ CITY_DATA = { 'chicago': 'chicago.csv',
               'washington': 'washington.csv' }
 
 
-# New print function to add low effect to the print function
+# New print function to add slow effect to the print function
 def print_s(text, delay=0.02):
     for char in text:
         print(char, end='', flush=True)
